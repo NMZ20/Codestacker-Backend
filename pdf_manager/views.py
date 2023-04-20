@@ -179,9 +179,9 @@ class TopWords(APIView):
         sentences = Sentence.objects.filter(pdf_file__id=id)
 
         stop_words = list(stopwords.words('english'))
-        punctuation_marks = list(string.punctuation)
+        punctuation_list = list(string.punctuation)
 
-        exclude = stop_words.extend(punctuation_marks)
+        exclude = stop_words + punctuation_list
 
         # Count the occurrences of all words in the documents
         word_counts = {}

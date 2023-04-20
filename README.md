@@ -2,7 +2,7 @@
 
 # Codestacker Backend Challenge
 
-This project is built using Django and uses SQLite Database. This django project provides the functionality of uploading PDF files to a cloud object storage, retriving files or their data, searching through the pdf files and deleting a file and all its related data.
+This project is built using Django and uses SQLite Database and Google cloud storage as an object storage to store pdf files on the cloud. This django project provides the functionality of uploading PDF files to a cloud object storage, retriving files or their data, searching through the pdf files and deleting a file and all its related data.
 
 ## Running the application
 

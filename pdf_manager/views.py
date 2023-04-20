@@ -2,10 +2,15 @@ import os
 
 import fitz
 import PyPDF2
+from django.contrib.auth.decorators import login_required
+from django.utils.decorators import method_decorator
 from django.http import HttpResponse
+from functools import wraps
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from django.shortcuts import get_object_or_404
+from rest_framework.authentication import SessionAuthentication, BasicAuthentication
+from rest_framework.permissions import IsAuthenticated
 
 from .gs_service import get_blob
 from .models import File, Sentence
@@ -13,6 +18,9 @@ from .serializers import FileSerializer, SentenceSerializer
 
 
 class UploadFile(APIView):
+    authentication_classes = [SessionAuthentication, BasicAuthentication]
+    permission_classes = [IsAuthenticated]
+
     def post(self, request):
         file = request.FILES["file"]
 
@@ -63,6 +71,9 @@ class UploadFile(APIView):
 
 
 class ListFiles(APIView):
+    authentication_classes = [SessionAuthentication, BasicAuthentication]
+    permission_classes = [IsAuthenticated]
+
     def get(self, request):
         files = File.objects.all()
         serializer = FileSerializer(files, many=True)
@@ -70,6 +81,9 @@ class ListFiles(APIView):
 
 
 class Search(APIView):
+    authentication_classes = [SessionAuthentication, BasicAuthentication]
+    permission_classes = [IsAuthenticated]
+
     def get(self, request, keyword):
         sentences = Sentence.objects.filter(sentence__contains=keyword)
         serializer = SentenceSerializer(sentences, many=True)
@@ -77,6 +91,9 @@ class Search(APIView):
 
 
 class FileRetrieve(APIView):
+    authentication_classes = [SessionAuthentication, BasicAuthentication]
+    permission_classes = [IsAuthenticated]
+
     def get(self, request, id):
         file = get_object_or_404(File, id=id)
 
@@ -92,6 +109,9 @@ class FileRetrieve(APIView):
 
 
 class DeleteFile(APIView):
+    authentication_classes = [SessionAuthentication, BasicAuthentication]
+    permission_classes = [IsAuthenticated]
+
     def get(self, request, id):
         file = get_object_or_404(File, id=id)
 
@@ -106,6 +126,9 @@ class DeleteFile(APIView):
 
 
 class RetrieveSentences(APIView):
+    authentication_classes = [SessionAuthentication, BasicAuthentication]
+    permission_classes = [IsAuthenticated]
+
     def get(self, request, id):
         sentences = Sentence.objects.filter(pdf_file__id=id)
         if sentences:
@@ -117,6 +140,9 @@ class RetrieveSentences(APIView):
 
 
 class CheckOccurence(APIView):
+    authentication_classes = [SessionAuthentication, BasicAuthentication]
+    permission_classes = [IsAuthenticated]
+
     def get(self, request, id, word):
         get_object_or_404(File, id=id)
 
@@ -141,6 +167,9 @@ class CheckOccurence(APIView):
 
 
 class TopWords(APIView):
+    authentication_classes = [SessionAuthentication, BasicAuthentication]
+    permission_classes = [IsAuthenticated]
+
     def get(self, request, id):
         get_object_or_404(File, id=id)
 
@@ -189,6 +218,9 @@ class TopWords(APIView):
 
 
 class GetPage(APIView):
+    authentication_classes = [SessionAuthentication, BasicAuthentication]
+    permission_classes = [IsAuthenticated]
+    
     def get(self, request, id, page_number):
         if page_number == 0:
             return Response({"error": "0 is not a valid page number"}, status=400)

@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "gifted-country-383911",
+  "private_key_id": "7fc4584dc675e8456a80cdd324dccdd333ba33d3",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDLIOjN9b07nPzp\nGxUeXabrTmTf/rv7+0FAstXWULaYrN4mb6cJgm927UNxXHrTiWSKMFurcgiRFwkC\ncbSTAAXN6pADBxViNML63fqjsxMxQ3Tsyr4qJVgo3ULervys2Ghnj2CiUw13lIEH\n9hWJK7t/v8elVBtEOWiojc7X7Y+MgWmRe9Gn8ozxiUzVyxKJhrIMz9HpU+qW8fLD\nzuIhXyOXH8GrKyoiWmWBTk8mbo3ikRkyoEwAaGG0ja3/K3sJCrOi5wpwJv4tVlou\noPKhNmQg6fF8+icNJ9odVKIhHyuGIre3zlKpnRNT/hr+9EpQYDfrhZC4Xz96izWU\nG8kQ2QGvAgMBAAECggEAILk0rVgX0VPj7d0Lj2tF7zrKBx3fWeOVv7RaZ57Jc8TG\n5bPvWcRWFvd3zyTiB/8RH9lU2Jn+evqWMdBwkeKbN3DrcgQWSU5iVON63nFZt6zR\ngtjR6Yc/nGxcup6/x6FLXIJIGTkTqSksNO9Lc+Au4hCFZgMr1gIA9Bp4RpKXoWo+\nffoEfKLZu2tyPxsa2eZZFCw8EnN2qMNWYFwROt/OQPLrGwQYfaENjTyDu4t455nI\nzTIOM6BOvHfScWgfC89a8qYqOE+DkuUjPfntYCmPAj75m2yHWHryvvAeV9/iT/7B\nXEzWKS+YzZHoJnuuDf21RMdXJNSlpVd9WR4adHFfKQKBgQD+wL+lj7IQ9rvAMoP7\n7gDYoGdk6ede/pl+QwSVFwhTIiDKqEf1uh5anawIZn0X7Pt0nJn4v/5bH0oMt3N4\n9lch0fL906mjzq9hm5H7SFajpJVmcZ9BVRDHdn3rdhzqqFXG+sngX6QrpDIVrJmV\noOI9B/WFLB8QYJfr0/nMssMapwKBgQDMH3dToWQbXxsmLdz+ruyMuGlwL5IFYVgs\nQNCZW0B3mrVnsMbjO8m6UwEve6MpwYyQi8mmCTHMoQ8i9CgZ1lDQ2ORAT7ZyQXDs\nnBD5Z/D7zbePmvYGkfAT2s7oOtfImBqSaiSfqdL3WLMCH6tT1laRUvsacZiEkM3D\nwb0BeXopuQKBgG8yNvTPOgxJhj4oTo/inR/xM/BKYKGIQ/tmyVNCUHHpDaMnvPE3\nIhSvie3IvoV4/XEzAcogE6g2ih3u3UpJTFMIzyWYBA3qI4dZXmjudFLNfiDPK5Ja\nzQ4jXGcwkQKkI3zM7t0vIfuimfH3+rnjFZ1KIhLU5WJCp01ao0iEJsE1AoGAEE4X\nJwwGRhVzwrn5JDLu3FLCwV5baKic9XP79bQPUz59bRn22SHmfEazGorivqwiQU2Z\nPvUPEExxPBaKuX2gGP6qROTZKwlFLvFMfc+qtUJ6fjMfoei4Z62bx3sjz3cu8DEg\nWcyj+HQSYIINGnZNlfAt9K/MQhKbDR8FrP96HakCgYBbckkpkTbCBnpKxCz3pZqH\nMSqPZvFsmBzsSQL1mjQL3hv+9YxAQZUzleRJwJYvG+FVFTEI12Cyaw5d5ZnfHJbD\nEqoR4Hhn8p3Hh2GY0V0tZAqyrdtV6mpZJo3ZUv7adNXjC2KVbSpRETBh68vEGbDU\nvFCy4Fk0e6O/AI2Lfk8BRw==\n-----END PRIVATE KEY-----\n",
+  "client_email": "codestacker@gifted-country-383911.iam.gserviceaccount.com",
+  "client_id": "105510837746987915620",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/codestacker%40gifted-country-383911.iam.gserviceaccount.com"
+}

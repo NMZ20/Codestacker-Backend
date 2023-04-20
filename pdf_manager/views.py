@@ -1,11 +1,7 @@
 import os
-
 import fitz
 import PyPDF2
-from django.contrib.auth.decorators import login_required
-from django.utils.decorators import method_decorator
 from django.http import HttpResponse
-from functools import wraps
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from django.shortcuts import get_object_or_404
@@ -18,6 +14,7 @@ from .serializers import FileSerializer, SentenceSerializer
 
 
 class UploadFile(APIView):
+    #Authentication logic
     authentication_classes = [SessionAuthentication, BasicAuthentication]
     permission_classes = [IsAuthenticated]
 
@@ -188,6 +185,8 @@ class TopWords(APIView):
             "at",
             "on",
             "in",
+            "of",
+            "for"
         ]
 
         # Count the occurrences of all words in the documents
@@ -220,7 +219,7 @@ class TopWords(APIView):
 class GetPage(APIView):
     authentication_classes = [SessionAuthentication, BasicAuthentication]
     permission_classes = [IsAuthenticated]
-    
+
     def get(self, request, id, page_number):
         if page_number == 0:
             return Response({"error": "0 is not a valid page number"}, status=400)

@@ -13,12 +13,9 @@ This project is built using Django and uses SQLite Database. This django project
 The APIs are protected with basic (username, password) authorization
 The current superuser have the following credintials (username: nmz, password: nmz). 
 
-#### Reset the database
-
-To reset the database delete the file `db.sqlite3`, then build and run the docker image again.
-Reseting the DB will also delete all users, see the next section on how to create a new superuser
-
 #### Create a new superuser
+
+The current superuser that is used for authentication is (username: nmz, password: nmz). If you want to create another user follow these steps:
 1. Make sure you have pip and pipenv installed, if not, install them using these commands: install pip `sudo apt-get install python3-pip`, install pipenv `pip3 install pipenv`
 2. Activate the virtual environment: `pipenv shell`
 3. run `python manage.py createsuperuser` and follow the instructions.

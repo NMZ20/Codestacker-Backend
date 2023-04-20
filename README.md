@@ -27,7 +27,7 @@ To use this project, you can make requests to the following endpoints:
 
 ### 1. UploadFile
 
-This endpoint is used to upload a file to the server. To upload a file, make a POST request to the /upload/ endpoint with a file attached to 'file' in the request body .
+This endpoint is used to upload a file to the server. To upload a file, make a POST request to the /upload/ endpoint with a file attached to the 'file' key in the request body .
 
 #### URL
 

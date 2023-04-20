@@ -1,12 +1,18 @@
 import os
 import fitz
 import PyPDF2
+import string
 from django.http import HttpResponse
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from django.shortcuts import get_object_or_404
 from rest_framework.authentication import SessionAuthentication, BasicAuthentication
 from rest_framework.permissions import IsAuthenticated
+
+#import all stop words from nltk library
+import nltk
+nltk.download('stopwords')
+from nltk.corpus import stopwords
 
 from .gs_service import get_blob
 from .models import File, Sentence
@@ -172,22 +178,10 @@ class TopWords(APIView):
 
         sentences = Sentence.objects.filter(pdf_file__id=id)
 
-        exclude_words = [
-            "the",
-            "but",
-            "it",
-            "and",
-            "is",
-            "or",
-            "#",
-            "a",
-            "an",
-            "at",
-            "on",
-            "in",
-            "of",
-            "for"
-        ]
+        stop_words = list(stopwords.words('english'))
+        punctuation_marks = list(string.punctuation)
+
+        exclude = stop_words.extend(punctuation_marks)
 
         # Count the occurrences of all words in the documents
         word_counts = {}
@@ -197,7 +191,7 @@ class TopWords(APIView):
             words = [
                 word
                 for word in sentence.sentence.lower().split()
-                if word not in exclude_words
+                if word not in exclude
             ]
             for word in words:
                 # Count the occurrences of each word

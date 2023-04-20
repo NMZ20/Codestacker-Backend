@@ -81,7 +81,7 @@ This endpoint is used to retrieve a pdf file from the server.
 
 #### URL
 
-`pdf/retrieve-file/<str:id>/`
+`pdf/get-pdf/<str:id>/`
 
 #### Method
 
@@ -97,7 +97,7 @@ This endpoint is used to retrieve all sentences in a file.
 
 #### URL
 
-`pdf/retrieve-sentences/<str:id>/`
+`pdf/get-sentences/<str:id>/`
 
 #### Method
 
